@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class WelcomeController {
 
 	@GetMapping("/welcome")
-	public String welcomeMsg(@RequestParam ("name") String name, Model model) {
-		
+	public String welcomeMsg(@RequestParam  (value ="name") String name, Model model) {
+		//String name = "Patil RamRam";
 		String msgtxt = name + ", welcome To Ganesh Patil App...!!!";
 		
 		model.addAttribute("msg", msgtxt);
